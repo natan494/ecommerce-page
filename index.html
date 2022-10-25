@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+  <nav class="nav-bar">
+
+    <div class="nav-bar__logo">
+
+      <img src="./images/logo.svg" alt="">
+    </div>
+    <img id="hemnburger" src="./images/icon-menu.svg" alt="">
+
+    <div class="mav-bar_link_container">
+      <img class="nav-bar_close" src="./images/icon-close.svg" alt="">
+      <a class="mav-bar_link" href="">Collections</a>
+      <a class="mav-bar_link" href="">Men</a>
+      <a class="mav-bar_link" href="">Women</a>
+      <a class="mav-bar_link" href="">About</a>
+      <a class="mav-bar_link" href="">Contact</a>
+    </div>
+    <div class="nav-bar_cart">
+      <div class="nav-bar_cart_container"> <svg class="nav-bar_cart" width="35" height="20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+            fill="#000" fill-rule="nonzero" />
+        </svg> <span class="nav-bar_counter dinsplay_none"></span>
+        <div class="cart_pop_up">
+          <div class="cart_pop_up__cart">
+            <div class="cart_pop_up__cart__text">
+              <p>Cart</p>
+            </div>
+            <!-- Test promo code : Thank_you_for_visiting -->
+            <div class="cart_pop_up_empty_container">
+              <h3 id="cart_pop_up_empty_text">Your cart is empty</h3>
+            </div>
+
+
+            <div class="cart_pop_up__cart__contennet_container dinsplay_none ">
+              <img class="cart_pop_up__cart__contennet__img" src="./images/image-product-1-thumbnail.jpg" alt="">
+              <div>
+                <p id="cart_pop_up__cart__contennet__brand">Fall Limited Edition Sneakers</p>
+
+                <p id="cart_pop_up__cart__contennet__price">$125.00 <span id="cart_count_items">x3</span> <span
+                    id="cart_pop_up__cart__contennet__calculate__price">$375.00</span></p>
+
+              </div>
+
+              <div class="cart_pop_up__cart__contennet__bin"><i><svg width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <path
+                        d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z"
+                        id="a" />
+                    </defs>
+                    <use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a" />
+                  </svg></i></div>
+            </div>
+            <div class="cart_pop_up__cart__contennet__Cheakout_container dinsplay_none"><button
+                id="cart_pop_up__cart__contennet__Cheakout">Checkout</button></div>
+
+            <div class="cart_pop_up__cart__contennet__Cheakout_container__promocode dinsplay_none">
+              <label for="promo_code ">Promo Code</label>
+              <input type=" text" name="promo_code" id="promo_code">
+              <button id="apply">Apply</button>
+            </div>
+
+          </div>
+
+          <div>
+
+
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <img class=" avatar_img" src="./images/image-avatar.png" alt="">
+
+    </div>
+  </nav>
+  <div class="desktop_view">
+    <section class="mobile_corosule">
+
+
+
+
+      <div class="slider">
+        <div class="mobile_cart_view">
+          <div class="mobile_cart_view_text_contaiiner">
+
+            <h3>cart</h3>
+          </div>
+          <div class="mobile_cart_view__empty_container  ">
+            <p>Your cart is empty</p>
+          </div>
+          <div class="mobile_cart_view__full_container dinsplay_none ">
+            <div><img class="mobile_cart_view__img" src="./images/image-product-1-thumbnail.jpg" alt="">
+              <div class="mobile_cart_view_promo__container">
+                <label for="mobile_cart_view_promo">Promo Code </label>
+                <input type="text" name="mobile_cart_view_promo" id="mobile_cart_view_promo">
+                <button id="mobile_cart_view__apply">Apply</button>
+              </div>
+            </div>
+            <div class="mobile_cart_view__pricing__contianer">
+
+              <div>
+                <p id="mobile_cart_view__title">Autumn Limited Edition...</p>
+              </div>
+              <svg class="mobile_cart_view__bin" width="14" height="16" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <path
+                    d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z"
+                    id="a" />
+                </defs>
+                <use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a" />
+              </svg>
+              <div>
+                <p id="mobile_cart_view__price">$125.00 <span id="mobile_cart_view__counter">X3</span>
+                  <span id="mobile_cart_view__fullPrice">$375.00</span>
+                </p>
+              </div>
+              <div class="mobile_cart_view__btn__continer"><button id="mobile_cart_view__btn">Checkout</button></div>
+
+            </div>
+
+
+          </div>
+        </div>
+        <!-- slide 1 -->
+        <div class="slide">
+          <img id="main-img" src="./images/image-product-1.jpg" alt="" />
+        </div>
+        <div class="img_tumpnnail__container">
+          <div>
+            <img class="img_tumpnnail 1" src="./images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div> <img class="img_tumpnnail 2" src="./images/image-product-2-thumbnail.jpg" alt=""></div>
+          <div><img class="img_tumpnnail 3" src="./images/image-product-3-thumbnail.jpg" alt=""></div>
+          <div><img class="img_tumpnnail 4" src="./images/image-product-4-thumbnail.jpg" alt=""></div>
+        </div>
+        <!-- slide 2 -->
+        <div class="slide" id="mobile">
+          <img class="slides_imges 2" src="./images/image-product-2.jpg" alt="" />
+        </div>
+
+        <!-- slide 3 -->
+        <div class="slide" id="mobile">
+          <img class="slides_imges 3" src="./images/image-product-3.jpg" alt="" />
+        </div>
+
+        <!-- slide 4 -->
+        <div class="slide" id="mobile">
+          <img class="slides_imges 4" src="./images/image-product-4.jpg" alt="" />
+        </div>
+
+        <!-- Control buttons -->
+        <button id="mobile" class="btn btn-next"> <img class="mobile_corosule__next" src="./images/icon-next.svg"
+            alt=""></button>
+
+        <button id="mobile" class=" btn btn-prev"><img class="mobile_corosule__prev" src="./images/icon-previous.svg"
+            alt=""></button>
+      </div>
+    </section>
+    <div class="right_desktop">
+      <section class="snkear-info__container">
+        <div>
+          <h3 class="snkear-info__name">SNEAKER COMPLANY</h3>
+        </div>
+        <div>
+          <h2>Fall Limited Edition <br> Sneakers</h2>
+        </div>
+        <div>
+          <p class="snkear-info__item_des">Those low-profile sneakert are your perfect <br>casual wear companion.
+            Featuring
+            a durable <br> rubber outer
+            sole. the'yll withstand everything <br> the weater can offer. </p>
+        </div>
+        <div>
+          <h4 class="snkear-info__price_dis">$125.00 <span class="snkear-info__pracente">50%</span> <span
+              class="snkear-info__fill-price">$250.00</span>
+          </h4>
+        </div>
+      </section>
+      <section class="number-of__wrapper">
+        <div class="number-of__container">
+          <div><i class="number-of__minus"><svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <path
+                    d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                    id="a" />
+                </defs>
+                <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+              </svg></i></div>
+          <div>
+            <p class="number-of_counter">0</p>
+          </div>
+          <div>
+
+            <div><i class="number-of__plus"><svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                    <path
+                      d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                      id="b" />
+                  </defs>
+                  <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                </svg></i> </div>
+
+
+
+
+          </div>
+        </div>
+        <div class="number-of__btn"><button class="btn_cart"><i>
+              <svg class="btn_svg" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#fff" fill-rule="nonzero" />
+              </svg></i>Add to
+            cart</button>
+        </div>
+
+
+      </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./src/app.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,578 @@
+body {
+	margin: 2rem 4rem;
+	font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+	--orange: hsl(26, 100%, 55%);
+	--pale_orange: hsl(25, 100%, 94%);
+	--very_dark_blue: hsl(220, 13%, 13%);
+	--dark_greyish_blue: hsl(219, 9%, 45%);
+	--grayish_blue: hsl(220, 14%, 75%);
+	--light_grayish_blue: hsl(223, 64%, 98%);
+	--white: hsl(0, 0%, 100);
+}
+.nav-bar {
+	display: grid;
+	grid-template-columns: 0.2fr 0.6fr 0.2fr;
+	grid-template-rows: 0.5fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	align-items: center;
+	border-bottom: 1px solid black;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}
+.avatar_img {
+	width: 3rem;
+	margin-left: 1.4rem;
+}
+
+.nav-bar_cart {
+	justify-self: self-end;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-right: 1rem;
+}
+.nav-bar_counter {
+	position: absolute;
+	bottom: 60%;
+	left: 10%;
+	transform: translate(-25%);
+	border: 1px solid orange;
+	padding: 0.2rem 0.5rem;
+	border-radius: 25px;
+	background-color: orange;
+	color: white;
+}
+
+.nav-bar_cart_container {
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.mav-bar_link {
+	margin: 1rem;
+	text-decoration: none;
+	color: var(--dark_greyish_blue);
+	font-size: 1.3rem;
+}
+.nav-bar_close {
+	display: none;
+}
+#hemnburger {
+	display: none;
+}
+
+@media (max-width: 824px) {
+	.mav-bar_link_container {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		left: -150%;
+		z-index: 6;
+		transition: left 2s;
+	}
+
+	.nav-bar {
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		border-bottom: none;
+	}
+	.nav-bar__logo {
+		display: flex;
+		margin: 1rem;
+	}
+	.nav-bar__logo img {
+		margin: 0.5rem;
+	}
+	.avatar_img {
+		width: 2rem;
+	}
+	#hemnburger {
+		position: absolute;
+		display: block;
+	}
+	body {
+		margin: 0;
+		transition: all 2s;
+	}
+	.nav-bar_close {
+		width: 1rem;
+		margin: 1rem;
+		display: block;
+	}
+	.body_change {
+		background-color: gray;
+	}
+	.nav_show {
+		left: 0;
+		top: 0%;
+		background-color: white;
+		width: 70%;
+		height: 100vh;
+		transition: left 2s;
+	}
+}
+
+/* end of nav bar style */
+
+#mobile {
+	display: none;
+}
+
+@media (max-width: 824px) {
+	.img_tumpnnail {
+		display: none;
+	}
+	.slider {
+		width: 100%;
+		max-width: 800px;
+		height: 350px;
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+	.slide {
+		width: 100%;
+		max-width: 800px;
+		height: 350px;
+		position: absolute;
+		transition: all 0.5s;
+	}
+
+	.slide img {
+		width: 100vw;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.btn {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		padding: 10px;
+		border: none;
+		border-radius: 50%;
+		z-index: 10px;
+		cursor: pointer;
+		background-color: #fff;
+		font-size: 18px;
+	}
+
+	.btn:active {
+		transform: scale(1.1);
+	}
+
+	.btn-prev {
+		top: 45%;
+		left: 2%;
+	}
+
+	.btn-next {
+		top: 45%;
+		right: 2%;
+	}
+	.slider {
+		width: 100%;
+		max-width: 800px;
+		height: 350px;
+		position: relative;
+		overflow: hidden; /* <===  */
+		border-radius: 15px;
+	}
+	#mobile {
+		display: block;
+	}
+	.number-of__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.number-of__btn {
+		align-self: center;
+	}
+	.btn_cart {
+		width: 90vw;
+		background-color: var(--orange);
+		color: white;
+		padding: 0.5rem 0;
+		border-radius: 10px;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 1rem;
+	}
+	.btn_cart:hover {
+		cursor: pointer;
+	}
+	.number-of__wrapper img {
+		margin-right: 1rem;
+		color: white;
+		width: 1rem;
+	}
+	.number-of__plus {
+		cursor: pointer;
+	}
+	.number-of__minus:hover {
+		cursor: pointer;
+	}
+	.btn_svg {
+		margin-right: 1rem;
+	}
+}
+
+/* /end of mobile carousel style */
+
+/*Start of sneaker info styling  */
+
+.snkear-info__container {
+	margin: 1rem;
+}
+
+.snkear-info__name {
+	color: var(--orange);
+}
+
+.snkear-info__item_des {
+	color: var(--dark_greyish_blue);
+	letter-spacing: 0.09rem;
+}
+
+.snkear-info__price_dis {
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+
+.snkear-info__pracente {
+	margin: 0rem 5rem 0rem 2rem;
+	padding: 0.5rem 0.5rem;
+	background-color: var(--pale_orange);
+	color: var(--orange);
+	border-radius: 10px;
+}
+
+.snkear-info__fill-price {
+	text-decoration: line-through;
+	color: var(--dark_greyish_blue);
+}
+
+/*End of sneaker info styling  */
+
+/* Start of number counter styling */
+
+.number-of__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 1rem;
+	border-radius: 25px;
+	background-color: var(--light_grayish_blue);
+}
+
+.number-of_counter {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/* end of number counter styling */
+
+@media (min-width: 825px) {
+	.desktop_view {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 1.7rem;
+	}
+
+	.snkear-info__container {
+		margin-left: 5rem;
+	}
+	#main-img {
+		width: 35vw;
+		border-radius: 25px;
+	}
+	.img_tumpnnail__container {
+		display: flex;
+		margin-top: 1rem;
+	}
+	.img_tumpnnail {
+		width: 7vw;
+		margin: 0.8rem;
+		border-radius: 20px;
+	}
+	.img_tumpnnail:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	.number-of__wrapper {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.number-of__container {
+		width: 30%;
+		align-items: baseline;
+	}
+	.number-of__btn {
+		width: 70%;
+	}
+	.btn_cart {
+		width: 80%;
+		cursor: pointer;
+		background-color: var(--orange);
+		color: white;
+		padding: 0.8rem 0;
+		border-radius: 10px;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.number-of__plus {
+		cursor: pointer;
+	}
+	.number-of__minus {
+		cursor: pointer;
+	}
+}
+
+.cart_pop_up {
+	width: 30rem;
+	height: 25rem;
+	position: absolute;
+	display: none;
+	box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.279);
+	z-index: 1;
+	right: 10%;
+	margin-top: 1rem;
+	background-color: white;
+}
+.cart_pop_up__cart__text {
+	border-bottom: 1px solid var(--dark_greyish_blue);
+	padding-bottom: 1rem;
+}
+
+.cart_pop_up__cart {
+	padding-bottom: 1rem;
+}
+.cart_pop_up__cart p {
+	margin: 1rem;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.display_block {
+	display: block !important;
+}
+.dinsplay_none {
+	display: none !important;
+}
+
+.mobile_cart_view {
+	position: absolute;
+	width: 97%;
+	border-radius: 10px;
+	height: 90%;
+	background-color: white;
+	z-index: 6;
+	top: 5%;
+	left: 2%;
+	display: none;
+}
+.mobile_cart_view_text_contaiiner {
+	border-bottom: 1px solid var(--dark_greyish_blue);
+}
+.mobile_cart_view_text_contaiiner h3 {
+	margin: 1rem;
+	text-transform: capitalize;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+.mobile_cart_view__empty_container {
+	display: flex;
+	align-items: center;
+	height: 70%;
+	width: 100%;
+	letter-spacing: 0.2rem;
+
+	justify-content: center;
+}
+.cart_pop_up__cart__contennet_container {
+	display: flex;
+	margin: 1rem;
+	align-items: center;
+	margin-top: 2rem;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.cart_pop_up__cart__contennet__img {
+	width: 100px;
+	height: 100px;
+	border-radius: 15px;
+}
+
+#cart_pop_up__cart__contennet__brand {
+	font-size: 1.2rem;
+}
+#cart_pop_up__cart__contennet__price {
+	color: var(--grayish_blue);
+	font-size: 1.3rem;
+}
+
+#cart_pop_up__cart__contennet__calculate__price {
+	color: black;
+	font-weight: bold;
+	margin-left: 0.5rem;
+	font-size: 1.5rem;
+}
+
+.cart_pop_up__cart__contennet__Cheakout_container {
+	margin-top: 1rem;
+}
+
+#cart_pop_up__cart__contennet__Cheakout {
+	background-color: var(--orange);
+	width: 98%;
+	margin: 0 0.3rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 1.5rem;
+}
+.cart_pop_up__cart__contennet__bin {
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.cart_pop_up_empty_container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin-top: 5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+#cart_pop_up_empty_text {
+	letter-spacing: 0.2rem;
+	color: var(--dark_greyish_blue);
+}
+
+.mobile_cart_view__full_container {
+	display: flex;
+	margin: 1rem;
+	margin-top: 1.6rem;
+}
+.mobile_cart_view__img {
+	height: 100px;
+	border-radius: 20px;
+}
+
+.mobile_cart_view__pricing__contianer {
+	width: 100%;
+	margin-left: 1rem;
+}
+
+.mobile_cart_view__bin {
+	float: right;
+	clear: both;
+}
+
+.mobile_cart_view__btn__continer {
+	margin-top: 1rem;
+	width: 100%;
+}
+
+#mobile_cart_view__btn {
+	width: 100%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: var(--orange);
+}
+
+#mobile_cart_view__title {
+	color: var(--dark_greyish_blue);
+	font-size: 1.2rem;
+}
+
+#mobile_cart_view__price {
+	color: var(--dark_grayish_blue);
+}
+
+#mobile_cart_view__counter {
+	color: var(--dark_grayish_blue);
+	margin-left: 0.2rem;
+	margin-right: 0.3rem;
+}
+
+#mobile_cart_view__fullPrice {
+	color: black;
+	font-weight: 800;
+}
+
+.cart_pop_up__cart__contennet__Cheakout_container__promocode {
+	width: 50vw;
+	margin-top: 1rem;
+	margin-left: 0.5rem;
+}
+
+#promo_code {
+	width: 200px;
+	margin-top: 1rem;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: var(--grayish_blue);
+	border: none;
+	font-size: 1.2rem;
+	padding-left: 1rem;
+}
+
+label {
+	font-size: 1.5rem;
+}
+
+.mobile_cart_view_promo__container {
+}
+
+.mobile_cart_view_promo__container label {
+	font-size: 0.6rem;
+	width: 20px;
+}
+
+#mobile_cart_view__apply {
+	padding: 0.5rem 1rem;
+	background-color: var(--orange);
+	margin-top: 0.5rem;
+	border: none;
+	color: white;
+}
+#mobile_cart_view_promo {
+	width: 100px;
+	background-color: var(--grayish_blue);
+	border-radius: 20px;
+	border: none;
+}
+
+#apply {
+	padding: 1rem 2rem;
+	border-radius: 15px;
+	border: none;
+	transition: all 0.3s;
+	color: var(--light_grayish_blue);
+	background-color: var(--orange);
+	cursor: pointer;
+}
+
+#apply:hover {
+	background-color: var(--pale_orange);
+	color: black;
+}
